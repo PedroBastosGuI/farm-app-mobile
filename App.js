@@ -17,7 +17,7 @@ export default function App() {
     <ThemeProvider theme={themes}>
       <NavigationContainer>
         <StatusBar barStyle={"light-content"}/>
-        { fontsLoaded ? <Routes /> : <Loading /> }
+        { !fontsLoaded ? <Routes /> : <Loading /> }
       </NavigationContainer>
     </ThemeProvider>
   );
