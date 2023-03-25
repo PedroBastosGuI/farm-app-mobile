@@ -1,22 +1,14 @@
 import { FontAwesome } from '@expo/vector-icons';
-import { useNavigation } from "@react-navigation/native";
 import { Text } from "react-native";
 
-import { 
-          Container, 
-          ContainerForm, 
-          ContainerButton, 
-          ButtonText, 
-          Message, 
-          ContainerInput, 
-          ContetInput,
-          ContetText, 
-          ContetLink 
-        } from './styles';
+import { InputTextForm } from '../../components/text-input-form'
+import { ButtonForm } from "../../components/button-form";
+
+import { Container, ContainerForm, Message, ContetLink } from './styles';
+
 
 export function Login(){
 
-  const  navigation = useNavigation();
   return(
     <Container>
       <FontAwesome 
@@ -27,19 +19,13 @@ export function Login(){
       <Message>Login</Message>
 
       <ContainerForm>
-        <ContainerInput>
-          <ContetText>E-mail</ContetText>
-          <ContetInput />
-        </ContainerInput>
 
-        <ContainerInput>
-          <ContetText>Senha</ContetText>
-          <ContetInput />
-        </ContainerInput>
+        <InputTextForm  title="E-mail"/>
 
-        <ContainerButton>
-          <ButtonText>Entrar</ButtonText>
-        </ContainerButton>        
+        <InputTextForm  title="Senha"/>
+
+        <ButtonForm  title="Entrar"/>
+
       </ContainerForm>
 
       <ContetLink to='/register' >
