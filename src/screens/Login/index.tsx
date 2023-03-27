@@ -1,37 +1,43 @@
 import { FontAwesome } from '@expo/vector-icons';
-import { Text } from "react-native";
+import { ImageBackground, Text, View } from "react-native";
 
 import { InputTextForm } from '../../components/text-input-form'
 import { ButtonForm } from "../../components/button-form";
 
-import { Container, ContainerForm, Message, ContetLink } from './styles';
+const splash = '../../assets/splash.png';
+
+import { Container, ContainerLogin, ContainerForm, Message, ContetLink, ImgBg } from './styles';
 
 
-export function Login(){
+export function Login() {
 
-  return(
+  return (
     <Container>
-      <FontAwesome 
-        name="user-o"
-        color="#FCCC1C"
-        size={120}
-      />
-      <Message>Login</Message>
+      <ImgBg source={require(splash)} resizeMode="cover"  blurRadius={10}>
+        <ContainerLogin>
+          <FontAwesome
+            name="user-o"
+            color="#FCCC1C"
+            size={80}
+          />
 
-      <ContainerForm>
+          <Message>Login</Message>
 
-        <InputTextForm  title="E-mail"/>
+          <ContainerForm>
 
-        <InputTextForm  title="Senha"/>
+            <InputTextForm title="E-mail" />
 
-        <ButtonForm  title="Entrar"/>
+            <InputTextForm title="Senha" />
 
-      </ContainerForm>
+            <ButtonForm title="Entrar" />
 
-      <ContetLink to='/register' >
-        <Text>Cadastre-se</Text>
-      </ContetLink>
-      
+          </ContainerForm>
+
+          <ContetLink to='/register' >
+            <Text>Cadastre-se</Text>
+          </ContetLink>
+          </ContainerLogin>
+      </ImgBg>
     </Container>
   );
 }

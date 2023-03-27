@@ -1,32 +1,37 @@
 import { FontAwesome } from '@expo/vector-icons';
 
-
 import { ButtonForm } from "../../components/button-form";
 import { InputTextForm } from "../../components/text-input-form";
 
-import { Container, Message, ContainerForm } from './styles';
+const splash = '../../assets/splash.png';
 
-export function Register(){
-  return(
+import { Container, ContainerLogin, ImgBg, Message, ContainerForm } from './styles';
+
+export function Register() {
+  return (
     <Container>
-      <FontAwesome 
-        name="user-o"
-        color="#FCCC1C"
-        size={120}
-      />
-      <Message>Cadastro</Message>
-      <ContainerForm>
-        
-        <InputTextForm title="E-mail" />
+      <ImgBg source={require(splash)} resizeMode="cover" blurRadius={10}>
 
-        <InputTextForm title="Telefone" />
+        <ContainerLogin>
+          <FontAwesome
+            name="user-o"
+            color="#FCCC1C"
+            size={80}
+          />
+          <Message>Cadastro</Message>
+          <ContainerForm>
 
-        <InputTextForm title="Senha" />
+            <InputTextForm title="E-mail" />
 
-        <ButtonForm title="Cadastrar" />
+            <InputTextForm title="Telefone" />
 
-      </ContainerForm>
+            <InputTextForm title="Senha" />
 
+            <ButtonForm title="Cadastrar" />
+
+          </ContainerForm>
+        </ContainerLogin>
+      </ImgBg>
     </Container>
   );
 }

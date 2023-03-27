@@ -3,6 +3,11 @@
     "name": "app-farm-mobile",
     "slug": "app-farm-mobile",
     "version": "1.0.0",
+    "splash": {
+      "image": "./src/assets/splash.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#ffffff"
+    },
     "assetBundlePatterns": [
       "**/*"
     ]

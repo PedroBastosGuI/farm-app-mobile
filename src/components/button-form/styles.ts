@@ -4,7 +4,7 @@ export const ContainerButton = styled.TouchableOpacity`
   background-color: ${({ theme }) => theme.COLORS.YELLOW_500};
   width: 180px;
   height: 45px;
-  margin-top: 24px;
+  margin-top: 20px;
   border-radius: 8px;
   align-items: center;
   justify-content: center;

@@ -1,7 +1,7 @@
 import styled from 'styled-components/native';
 
 export const ContainerInput = styled.View`
-  margin: 15px 0;
+  margin: 10px 0;
 `
 
 export const ContetText =  styled.Text`
