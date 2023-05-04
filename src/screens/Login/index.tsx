@@ -1,5 +1,6 @@
 import { FontAwesome } from '@expo/vector-icons';
-import { ImageBackground, Text, View } from "react-native";
+import { Text } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
 import { InputTextForm } from '../../components/text-input-form'
 import { ButtonForm } from "../../components/button-form";
@@ -7,9 +8,10 @@ import { ButtonForm } from "../../components/button-form";
 const splash = '../../assets/splash.png';
 
 import { Container, ContainerLogin, ContainerForm, Message, ContetLink, ImgBg } from './styles';
-
+import { Home } from "../home";
 
 export function Login() {
+  const { navigate } = useNavigation();
 
   return (
     <Container>
@@ -29,7 +31,10 @@ export function Login() {
 
             <InputTextForm title="Senha" />
 
-            <ButtonForm title="Entrar" />
+            <ButtonForm 
+              title="Entrar" 
+              onPress={ () => navigate('home')}
+            />
 
           </ContainerForm>
 

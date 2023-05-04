@@ -1,6 +1,7 @@
+import { TouchableOpacity } from "react-native"
 import styled from 'styled-components/native'
 
-export const ContainerButton = styled.TouchableOpacity`
+export const ContainerButton = styled(TouchableOpacity)`
   background-color: ${({ theme }) => theme.COLORS.YELLOW_500};
   width: 180px;
   height: 45px;
